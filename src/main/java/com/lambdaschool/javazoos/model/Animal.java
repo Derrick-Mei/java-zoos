@@ -1,7 +1,6 @@
 package com.lambdaschool.javazoos.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import lombok.Data;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -9,7 +8,6 @@ import java.util.Set;
 
 @Entity
 @Table(name = "animal")
-@Data
 public class Animal
 {
     @Id
@@ -24,5 +22,35 @@ public class Animal
 
     public Animal()
     {
+    }
+
+    public long getAnimalid()
+    {
+        return animalid;
+    }
+
+    public void setAnimalid(long animalid)
+    {
+        this.animalid = animalid;
+    }
+
+    public String getAnimaltype()
+    {
+        return animaltype;
+    }
+
+    public void setAnimaltype(String animaltype)
+    {
+        this.animaltype = animaltype;
+    }
+
+    public Set<Zoo> getZoos()
+    {
+        return zoos;
+    }
+
+    public void setZoos(Set<Zoo> zoos)
+    {
+        this.zoos = zoos;
     }
 }
